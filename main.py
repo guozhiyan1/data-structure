@@ -11,9 +11,27 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # print_hi('PyCharm')
-    str="nowcoder. a am I"
-    list=str.split()
-    print(list.pop())
+    a=[1,2,3]
+    print_hi(a[1:2])
+    # import collections
+    # d = collections.deque("abcdefg")
+    # print(d)
+    # print(d[0])
+    # d.remove('c')
+    # print(d)
+    # d.extend(range(2))
+    # print(d)
+    # d.append(2)
+    # print(d)
+    # d.extendleft('h')
+    # print(d)
+    # d.appendleft('i')
+    # print(d)
+    # d.pop()
+    # print(d)
+    # d.popleft()
+    # print(d)
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

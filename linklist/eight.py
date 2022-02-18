@@ -56,6 +56,6 @@ class Solution2:
         lis.next=None
         return res.next
 # 递归
-class Solution3:
-    def deleteDuplication(self, pHead: ListNode) -> ListNode:
-        # write code here
+# class Solution3:
+#     def deleteDuplication(self, pHead: ListNode) -> ListNode:
+#         # write code here
