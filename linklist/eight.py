@@ -56,6 +56,16 @@ class Solution2:
         lis.next=None
         return res.next
 # 递归
-# class Solution3:
-#     def deleteDuplication(self, pHead: ListNode) -> ListNode:
-#         # write code here
+class Solution3:
+    def deleteDuplication(self, pHead: ListNode) -> ListNode:
+        # write code here
+        if not pHead or not pHead.next:
+            return pHead
+        if pHead.val==pHead.next.val:
+            node=pHead.next.next
+            while node and pHead.val==node.val:
+                node=node.next
+            return self.deleteDuplication(node)
+        elif pHead.val!=pHead.next.val:
+            pHead.next=self.deleteDuplication(pHead.next)
+            return pHead

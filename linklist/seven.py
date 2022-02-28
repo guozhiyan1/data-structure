@@ -13,13 +13,17 @@ class Solution1:
         return ret
 #递归
 class Solution2:
+    # 返回 RandomListNode 方法1：在A后面加A，最后再拆下来
     def Clone(self, pHead):
-        if not pHead:
-            return None
-        ret=RandomListNode(pHead.label)
-        ret.random=RandomListNode(pHead.random)
-        ret.next=RandomListNode(pHead.next)
-        return ret
+        node = RandomListNode(None)
+        head = node
+        while pHead:
+            node.next = RandomListNode(pHead.label)
+            node = node.next
+            node.next = pHead.next
+            node.random = pHead.random
+            pHead = pHead.next
+        return head.next
 #循环
 class Solution2:
     class Solution3:

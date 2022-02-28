@@ -72,6 +72,20 @@ class solution4:
             if(p1==p2):
                 node =p1
         return node
+#集合去重
+class Solution5:
+    def FindFirstCommonNode(self , pHead1 , pHead2 ):
+        # write code here
+        node=set()
+        while pHead1:
+            node.add(pHead1)
+            pHead1=pHead1.next
+        while pHead2:
+            if pHead2 in node:
+                return pHead2
+            else:
+                pHead2=pHead2.next
+        return None
 
 
 
