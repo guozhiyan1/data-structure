@@ -11,3 +11,31 @@ class Solution1:
                 j=j+1
         return j==len(popV)
 #代码优化  不用辅助栈
+class Solution:
+    def IsPopOrder(self , pushV: List[int], popV: List[int]) -> bool:
+        # write code here
+        stack=[]
+        j=0
+        while j<len(pushV):
+                if pushV[j]!=popV[0] and not stack:
+                    stack.append(pushV[j])
+                    j=j+1
+                elif stack and pushV[j]!=popV[0] and stack[-1]!=popV[0]:
+                    stack.append(pushV[j])
+                    j=j+1
+                elif stack and stack[-1]==popV[0]:
+                    popV.pop(0)
+                    stack.pop()
+                else:
+                    popV.pop(0)
+                    j=j+1
+        while stack:
+            if stack[-1]==popV[0]:
+                popV.pop(0)
+                stack.pop()
+            else:
+                break
+        if not popV:
+            return True
+        else:
+            return False
