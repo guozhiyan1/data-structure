@@ -9,12 +9,6 @@ class Solution:
         if pRoot==None:
             return pRoot
         pRoot1=TreeNode(pRoot.val)
-        if not pRoot.left:
-            pRoot1.left=self.Mirror(pRoot.right)
-            pRoot1.right=None
-        if not pRoot.right:
-            pRoot1.right=self.Mirror(pRoot.right)
-            pRoot1.left=None
         pRoot1.left=self.Mirror(pRoot.right)
         pRoot1.right=self.Mirror(pRoot.left)
         return pRoot1

@@ -27,3 +27,29 @@ class Solution:
                     return self.VerifySquenceOfBST(sequence[0:length-1])
                 if sequence[i]>root and sequence[i+1]<root:
                     return False
+class Solution1:
+    def VerifySquenceOfBST(self , sequence: List[int]) -> bool:
+        # write code here
+        length=len(sequence)
+        if not sequence:
+            return False
+        if length==1:
+            return True
+        l1=0
+        l2=0
+        for i in range(length-1):
+            if sequence[i]<sequence[length-1]:
+                l1=l1+1
+            if sequence[i]>sequence[length-1]:
+                    l2=l2+1
+        if length-l1<=1:
+            return self.VerifySquenceOfBST(sequence[0:l1])
+        if length-l2<=1:
+            return self.VerifySquenceOfBST(sequence[0:l2])
+        for i in range(l1):
+            if sequence[i]>sequence[length-1]:
+                return False
+        for i in range(l1,l1+l2-1):
+            if sequence[i]<sequence[length-1]:
+                return False
+        return self.VerifySquenceOfBST(sequence[0:l1]) and self.VerifySquenceOfBST(sequence[l1:l1+l2])
