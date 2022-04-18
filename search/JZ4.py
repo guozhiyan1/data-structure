@@ -6,7 +6,7 @@ class Solution:
                 if array[i][j]==target:
                     return True
         return False
-#主要在于选择合适的位置才能使用二分法
+#主要在于选择合适的位置才能使用二分法法
 class Solution1:
     def Find(self , target: int, array: List[List[int]]) -> bool:
         # write code here

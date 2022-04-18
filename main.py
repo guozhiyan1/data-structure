@@ -21,10 +21,17 @@ if __name__ == '__main__':
     a.pop()
     # for i in range(len(a)):
     #     b.append(a.pop())
-    print_hi(1/2)
-    print_hi(1 // 2)
-    print_hi(math.ceil(1/2))
-    print_hi(math.floor(1 / 2))
+    # print_hi(1/2)
+    # print_hi(1 // 2)
+    # print_hi(math.ceil(1/2))
+    # print_hi(math.floor(1 / 2))
+    # str="lwq"
+    #字符串转换成列表
+    # print_hi(len(str))
+    # print_hi(list(str))
+    # list1=[1,2,3]
+    # st="".join(('%s' %id for id in list1))
+    # print_hi(st)
     # import collections
     # d = collections.deque("abcdefg")
     # print(d)
@@ -43,6 +50,10 @@ if __name__ == '__main__':
     # print(d)
     # d.popleft()
     # print(d)
+    str="abc"
+    b=[]
+    b.append(str)
+    print(str[1:3])
 
 
 
