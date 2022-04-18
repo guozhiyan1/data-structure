@@ -11,6 +11,7 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 import copy
+import math
 if __name__ == '__main__':
     # a=[[1,2,3],[1,4,5],[1,2,7]]
     # b=[i for i in a if sum(i)==10]
@@ -20,7 +21,10 @@ if __name__ == '__main__':
     a.pop()
     # for i in range(len(a)):
     #     b.append(a.pop())
-    print_hi(b)
+    print_hi(1/2)
+    print_hi(1 // 2)
+    print_hi(math.ceil(1/2))
+    print_hi(math.floor(1 / 2))
     # import collections
     # d = collections.deque("abcdefg")
     # print(d)

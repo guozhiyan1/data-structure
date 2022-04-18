@@ -25,4 +25,27 @@ class Solution1:
         self.middle(root.left)
         self.arr.append(root)
         self.middle(root.right)
-
+#中序遍历法
+class Solution1:
+    def __init__(self):
+        self.mid=[]
+    def isSymmetrical(self , pRoot: TreeNode) -> bool:
+        # write code here
+        if not pRoot:
+            return True
+        if pRoot.left and pRoot.right and pRoot.left.val!=pRoot.right.val:
+            return False
+        self.MidSort(pRoot)
+        if len(self.mid)%2==0:
+            return False
+        for i in range(len(self.mid)//2):
+            if self.mid[i]!=self.mid[len(self.mid)-1-i]:
+                return False
+        return True
+    def MidSort(self,pRoot):
+        if not pRoot:
+            return None  #可以避免很多问题，不需要if true来判断
+        self.MidSort(pRoot.left)
+        self.mid.append(pRoot.val)
+        self.MidSort(pRoot.right)
+#迭代法
