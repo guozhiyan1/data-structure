@@ -56,3 +56,18 @@ class Solution:
             else:
                 left=mid+1
         return right
+class Solution:
+    def __init__(self):
+        self.count=0
+    def GetNumberOfK(self , data: List[int], k: int) -> int:
+        # write code here
+        if not data:
+            return 0
+        if data[len(data)//2]<k:
+            self.GetNumberOfK(data[len(data)//2+1:], k)
+        elif data[len(data)//2]>k:
+            self.GetNumberOfK(data[0:len(data)//2], k)
+        else:
+            self.count+=1
+            self.GetNumberOfK(data[0:len(data)//2], k) and self.GetNumberOfK(data[len(data)//2+1:], k)
+        return self.count

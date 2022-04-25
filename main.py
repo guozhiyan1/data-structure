@@ -50,10 +50,16 @@ if __name__ == '__main__':
     # print(d)
     # d.popleft()
     # print(d)
-    str="abc"
-    b=[]
-    b.append(str)
-    print(str[1:3])
+    # str="abc"
+    # b=[]
+    # b.append(str)
+    # print(str[1:3])
+    # a=[[0]*3]*4
+    # dp=dp=[[0 for _ in range(3)] for _ in range(4)]
+    # dp = [[0 for _ in range(5)] for _ in range(4)]
+    a={}
+    a["i"]=0
+    print(a)
 
 
 

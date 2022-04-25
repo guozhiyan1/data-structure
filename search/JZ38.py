@@ -4,9 +4,12 @@
 三个字符：0     1，2
       1       0，2
       2       0，1
+      ABC [0:0]  A      BC
+          [0:1]   B     A+bc
+          [0:2]   C     AB+c
 '''
 class Solution:
-    def Permutation(self , str: str) -> List[str]:
+    def Permutation(self , str):
         # write code here
         length=len(str)
         if length<=1:
@@ -20,3 +23,6 @@ class Solution:
                 if str1 not in b:
                     b.append(str1)
         return b
+if __name__ == '__main__':
+    s=Solution()
+    print(s.Permutation("ABC"))
