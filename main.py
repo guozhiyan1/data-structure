@@ -56,10 +56,23 @@ if __name__ == '__main__':
     # print(str[1:3])
     # a=[[0]*3]*4
     # dp=dp=[[0 for _ in range(3)] for _ in range(4)]
-    # dp = [[0 for _ in range(5)] for _ in range(4)]
-    a={}
-    a["i"]=0
-    print(a)
+    # flag=[[False for _ in range(3)] for _ in range(4)]
+    # a={}
+    # a["i"]=0
+    # print(flag)
+    # count=0
+    # for i in range(100):
+    #     if i//10+i%10<=10:
+    #         print(i)
+    #         print("HI")
+    nums="101"
+    # flag1=[[a,b,c,e],[s,f,c,s],[a,d,e,e]]
+    flag2=[[False for i in range(3)] for j in range(4)]
+    # print(flag1)
+    print(flag2)
+    i=29
+    print(i//10+i%10)
+
 
 
 
