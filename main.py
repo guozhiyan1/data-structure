@@ -12,6 +12,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 import copy
 import math
+import re
 if __name__ == '__main__':
     # a=[[1,2,3],[1,4,5],[1,2,7]]
     # b=[i for i in a if sum(i)==10]
@@ -65,13 +66,22 @@ if __name__ == '__main__':
     #     if i//10+i%10<=10:
     #         print(i)
     #         print("HI")
-    nums="101"
-    # flag1=[[a,b,c,e],[s,f,c,s],[a,d,e,e]]
-    flag2=[[False for i in range(3)] for j in range(4)]
-    # print(flag1)
-    print(flag2)
-    i=29
-    print(i//10+i%10)
+    # nums="101"
+    # # flag1=[[a,b,c,e],[s,f,c,s],[a,d,e,e]]
+    # flag2=[[False for i in range(3)] for j in range(4)]
+    # # print(flag1)
+    # print(flag2)
+    # i=29
+    # print(i//10+i%10)
+    # print(ord("a"))
+    # print(ord("0"))
+    # print(ord("+"))
+    # print(ord("-"))
+    # print(ord("8"))
+    a=int(-5)
+    print(bin(−214748364))
+    # if re.match("^(\d)+((\.)(\d)+){0,1}$",a):
+    #     print("hahah")
 
 
 
