@@ -10,16 +10,17 @@ def print_hi(name):
 
 
 # Press the green button in the gutter to run the script.
+
 import copy
 import math
 import re
 if __name__ == '__main__':
     # a=[[1,2,3],[1,4,5],[1,2,7]]
     # b=[i for i in a if sum(i)==10]
-    a=[1,2]
-    b=[]
-    b.append(copy.deepcopy( a ))
-    a.pop()
+    # a=[1,2]
+    # b=[]
+    # b.append(copy.deepcopy( a ))
+    # a.pop()
     # for i in range(len(a)):
     #     b.append(a.pop())
     # print_hi(1/2)
@@ -78,10 +79,24 @@ if __name__ == '__main__':
     # print(ord("+"))
     # print(ord("-"))
     # print(ord("8"))
-    a=int(-5)
-    print(bin(−214748364))
+    # a=int(-5)
+    # print(bin(a))
+    # a=[1,2,3,1]
+    # print(a.count(a[0]))
+    # for i in range(5):
+    #     print(i)
     # if re.match("^(\d)+((\.)(\d)+){0,1}$",a):
     #     print("hahah")
+    # a={'e': 5, 'l': 4}
+    # print(min(a.values()))
+    # print("We%3sAre%3sHappy" % ("%20","%20"))
+    # print("We%3sAre%3sHappy".format("%20","%20"))
+    # s="we are happy"
+    # print(s.replace(" ","%20"))
+    b=[]
+    b[0]=1
+    print(b)
+
 
 
 
