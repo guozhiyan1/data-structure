@@ -93,12 +93,9 @@ if __name__ == '__main__':
     # print("We%3sAre%3sHappy".format("%20","%20"))
     # s="we are happy"
     # print(s.replace(" ","%20"))
-    b=[]
-    b[0]=1
-    print(b)
-
-
-
-
-
+    # b=[]
+    # b[0]=1
+    # print(b)
+    for i in range(6,-1,-1):
+        print(i)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

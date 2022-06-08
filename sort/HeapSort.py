@@ -8,27 +8,32 @@
 
 """
 class Solution:
-    def heapsort(self,nums):
-        length=len(nums)
-        for i in range(length,-1,-1):#5,4,3,2,1,0
-            self.heapify(nums,length,i)
-        for i in range(length-1,0,-1):#4,3,2,1 len=5
-            nums[i],nums[0]=nums[0],nums[i]
-            self.heapify(nums,i,0)
-        return nums
+    def adjust_heap(self,nums, i, length):
+        lchild = 2 * i + 1
+        rchild = 2 * i + 2
+        max = i
+        if i < length / 2:
+            if lchild < length and nums[lchild] > nums[max]:
+                max = lchild
+            if rchild < length and nums[rchild] > nums[max]:
+                max = rchild
+            if max != i:
+                nums[max], nums[i] = nums[i], nums[max]
+                self.adjust_heap(nums, max, length)
 
-    def heapify(self,nums,length,i):
-        largest=i
-        left=2*i+1
-        right=2*i+2
-        if left<length and nums[i]<nums[left]:
-            largest=left
-        if right<length and nums[largest]<nums[right]:
-            largest=right
-        if largest!=i:
-            nums[i],nums[largest]=nums[largest],nums[i]
-            self.heapify(nums,length,largest)
+    def build_heap(self,nums): #构建大根堆
+        length=len(nums)
+        for i in range(0, (length // 2))[::-1]:
+            self.adjust_heap(nums, i, length)
+
+    def heapsort(self,nums):
+        length = len(nums)
+        self.build_heap(nums)
+        for i in range(length-1,-1,-1): #6~0
+            nums[0], nums[i] = nums[i], nums[0]  #将堆顶元素和最后一个元素交换
+            self.adjust_heap(nums, 0, i)#剩下的i-1个元素构建大根堆
 if __name__ == '__main__':
     a=Solution()
-    nums=[4,5,8,2,3,9,7,1]
-    print(a.heapsort(nums))
+    nums=[70,60,12,40,30,8,10]
+    a.heapsort(nums)
+    print(nums)
