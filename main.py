@@ -10,10 +10,11 @@ def print_hi(name):
 
 
 # Press the green button in the gutter to run the script.
-
+import heapq
 import copy
 import math
 import re
+import functools
 if __name__ == '__main__':
     # a=[[1,2,3],[1,4,5],[1,2,7]]
     # b=[i for i in a if sum(i)==10]
@@ -96,6 +97,17 @@ if __name__ == '__main__':
     # b=[]
     # b[0]=1
     # print(b)
-    for i in range(6,-1,-1):
-        print(i)
+    # for i in range(6,-1,-1):
+    #     print(i)
+    # num=[1,3,7]
+    # num.insert(2,4)
+    # print(num)
+    # val=[1,2,3,4,5]
+    # num=6
+    # # 插入相应位置
+    # val.insert(5, num)
+    print(min(4,5,3))
+    # a=[1,2,3]
+    # nums = list(map(str, a))
+    # print(nums)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

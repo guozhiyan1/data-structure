@@ -14,12 +14,8 @@ class Solution1:
                 node.add(pHead)
                 pHead=pHead.next
         return None
-<<<<<<< HEAD
 #双指针法：
 # 快慢指针：创建快、慢两个指针（fast、slow），然后fast指针一次走2步；slow指针一次走 1步；如果不存在环，则直接返回None；否则fast、slow指针一定会相遇
-=======
-#双指针法：创建快、慢两个指针（fast、slow），然后fast指针一次走2步；slow指针一次走 1步；如果不存在环，则直接返回None；否则fast、slow指针一定会相遇
->>>>>>> 3b6dd5c7110df2262011601a3c1094909d4c131a
 #此时再增加一次指针从头开始node每次走1步，它和慢指针第一次相遇就在环节点的入口
 class Solution2:
     def EntryNodeOfLoop(self, pHead):
