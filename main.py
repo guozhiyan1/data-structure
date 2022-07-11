@@ -18,6 +18,7 @@ import functools
 if __name__ == '__main__':
     # a=[[1,2,3],[1,4,5],[1,2,7]]
     # b=[i for i in a if sum(i)==10]
+    # print(b)
     # a=[1,2]
     # b=[]
     # b.append(copy.deepcopy( a ))
@@ -49,7 +50,8 @@ if __name__ == '__main__':
     # print(d)
     # d.appendleft('i')
     # print(d)
-    # d.pop()
+    # d=[1,2,3]
+    # d.pop(-1)
     # print(d)
     # d.popleft()
     # print(d)
@@ -106,8 +108,14 @@ if __name__ == '__main__':
     # num=6
     # # 插入相应位置
     # val.insert(5, num)
-    print(min(4,5,3))
+    # print(min(4,5,3))
     # a=[1,2,3]
     # nums = list(map(str, a))
     # print(nums)
+    # a={0: 1, 1: 4}
+    # if 0 not in a:
+    #     print("3333")
+    a=list("abc")
+    a.reverse()
+    print(a)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

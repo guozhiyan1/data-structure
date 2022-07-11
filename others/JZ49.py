@@ -44,7 +44,7 @@ class Solution:
 乘以3的队列：3，6
 乘以5的队列：5，10
 """
-    class Solution:
+class Solution:
         def GetUglyNumber_Solution(self, index):
             # 排除0
             if index == 0:
